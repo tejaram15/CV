@@ -1,0 +1,118 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\addtolength{\topmargin}{-0.5in}
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumitem}
+\setlist{leftmargin=2.5mm}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Karra \textsc{Raghu Ram}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Rayagada,Odisha | 8\textsuperscript{th} June 1997 \\
+    \textsc{Address:}   & Block Colony, Rayagada, Odisha, India \\
+    \textsc{Phone:}     & +91 8093147254\\
+    \textsc{email:}     & \href{raghuramkarra15@gmail.com}{raghuramkarra15@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{May-July 2017} & Summer Intern at \textsc{BBSSL}, \emph{Bangalore}\\&\normalsize {
+\begin{itemize}
+\item Developed an ``\emph{Event Driven Framework}'' to visualize the Server side Changes in the Core Database.
+\item \emph{Dgraph}, \emph{Apache Kafka}, \emph{D3.js} and \emph{Node.js} were used as the Core Technologies.
+\item Received pre-placed offer from the Head of Technical Research as a result of Positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.
+\end{itemize}
+}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{May} 2018 & Bachelor of Technology in \textsc{Computer Science and Engineering} \\ & \textbf{Veer Surendra Sai University Of Technology}, Burla\\
+&\normalsize \textsc{Cgpa}: 8.62/10\\
+\end{tabular}
+
+%Section: Achievements
+\section{Achievements}
+\begin{tabular}{rl}
+ \textsc{June.} 2017 & {\large\emph{Hacker Rank}} - Earned 1 Silver and 5 Gold Medals in Weekly Contests \\ & 82\textsuperscript{nd} percentile career in Algorithmic Challenges over 27 Competitions.\\
+\textsc{June} 2017 & {\large\emph{Codechef}} - Regular Contestant with rating \emph{1625}\\
+\textsc{June} 2017 & {\large\emph{Hackerearth}} - Regular Contestant with rating \emph{1263}\\
+\end{tabular}
+
+%Section: Projects and Open-Source Contributions
+\section{Projects and Open-Source Contributions}
+\begin{tabular}{rl}
+\textsc{May.} 2017 & {\large\emph{Image Processing}} - Developed a Intrusion Detection System using \emph{Python,} \\ & \emph{OpenCV} and \emph{Machine Learning} with 82.56\% Accuracy.\\
+\textsc{Feb.} 2017 & {\large\emph{POC}} - Developed a Matrix Class and a Static Map Class and Optimized \\ & with $O(1)$ constant insertion Time Complexity.\\
+\textsc{March} 2017 & {\large\emph{Robotics}} - Built a Object Following Robot using \emph{OpenCV and Python}\\ & for automatic Tracking and Obstacle Avoidance.\\
+\textsc{December} 2016 & {\large\emph{Robotics}} - Successfully Implemented Holonomic Motion Planning Of \\ & Omni Wheels in ROBOCON-2K17 with AIR-6\textsuperscript{th}.\\
+\end{tabular}
+
+%Section: Clubs and Activities
+\section{Clubs and Activities}
+\begin{tabular}{rl}
+\textsc{Feb.} 2015 & {\large\emph{Robotics Society}} - Drive Design and Coding Decisions for ROBOCON.\\& \nopagebreak
+Conduct Research on New Technology and Sensors.\\ \nopagebreak
+\textsc{Nov.} 2016 & {\large\emph{Coding Club - Enigma}} - Voluntarily teach Algorithms for Competitive Programming.\\& \nopagebreak
+Organize Online Coding Competitions like $BIG-O v2.0$.\\ \nopagebreak
+\end{tabular}
+\end{document}
+
